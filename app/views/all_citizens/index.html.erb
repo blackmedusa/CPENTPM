@@ -1,0 +1,51 @@
+<div class="ui center aligned container" >
+  <div class="ui mini segment" >
+    <span class="ui huge header">CATEGORIES</span>
+  </div>
+  <div class="ui container">
+    <div class="ui segments">
+      <div class="ui segment">
+
+        <div class="ui header">ELECTORAL COMMISSION</div>
+          <div class="ui link centered cards">
+          <%@electoral_citizens.each do |citizen|%>
+           <%= link_to electoral_citizen_path(citizen) do %>
+              <div class="ui card">
+                  <%= link_to "#{citizen.first_name}", electoral_citizen_path(citizen), class: "ui basic huge bottom attached label"%>
+              </div>
+            <% end %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="ui segment">
+
+        <div class="ui header">BIRTH AND DEATH REGISTRY</div>
+          <div class="ui link centered cards">
+          <%@registry_citizens.each do |citizen|%>
+           <%= link_to registry_citizen_path(citizen) do %>
+              <div class="ui card">
+                  <%= link_to "#{citizen.first_name}", registry_citizen_path(citizen), class: "ui basic huge bottom attached label"%>
+              </div>
+            <% end %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="ui segment">
+
+        <div class="ui header">NHIS</div>
+          <div class="ui link centered cards">
+          <%@nhis_citizens.each do |citizen|%>
+           <%= link_to nhis_citizen_path(citizen) do %>
+              <div class="ui card">
+                  <%= link_to "#{citizen.first_name}", nhis_citizen_path(citizen), class: "ui basic huge bottom attached label"%>
+              </div>
+            <% end %>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+
+<div class="ui center aligned container" style="width:40%">
+  <div class="ui container">
+    <div class="ui segment">
+    <h2 class="ui huge header">LOGIN</h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "ui form"}) do |f| %>
+        <div class="field" style="font-size: 1.3em;">
+          <%= f.label :email%><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",  required: true %>
+        </div>
+
+        <div class="field" style="font-size: 1.3em;">
+          <%= f.label :password%><br />
+          <%= f.password_field :password, autocomplete: "current-password",  required: true%>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+      
+          
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Log in", class: "ui primary button" %>
+        </div>
+        </br>
+        <%= render "devise/shared/links" %>
+      <% end %>
+    </div>
+  </div>
+</div>

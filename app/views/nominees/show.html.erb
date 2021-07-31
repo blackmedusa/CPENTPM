@@ -1,0 +1,57 @@
+<div id="content">
+  <div class="ui container">
+    <div class="ui center aligned segment">
+      <h2 class="huge inverted header">Nominated for the
+        <span >
+          <%= link_to @nominee.award.name.upcase, award_path(@nominee.award)%>
+        </span>
+        award</h2>
+    </div>
+    <div class="ui center aligned container">
+      <div class="ui three column stackable center aligned grid">
+        <div class="column">
+          <div class="ui segment">
+              <h4 class="header" style="text-decoration: underline;">name</h4>
+              <h1><%= @nominee.first_name%> <%= @nominee.last_name%></h1>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+              <div class="ui slide masked reveal">
+                <%= image_tag("lolx.jfif", class: "visible content")%>
+                <%= image_tag("lolx.jfif", class: "hidden content")%>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            <h4 class="header" style="text-decoration: underline;">Biography</h4>
+          <h1>
+            <%= @nominee.biography%>
+          </h1>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="ui center aligned placeholder piled segment">
+        <div class="ui left dividing rail">
+          <h1 class="ui container" style="background-color: red; margin-top: 50%">
+            <p><%= @nominee.first_name%> <%= @nominee.last_name%></p>
+          </h1>
+        </div>
+        <div class="ui  right dividing rail">
+          <h4 class="header" style="text-decoration: underline;">Biography</h4>
+          <h1>
+            <%= @nominee.biography%>
+          </h1>
+          
+        </div>
+        <div class="ui card" >
+          <div class="ui slide masked reveal">
+            <%= image_tag("lolx.jfif", class: "visible content")%>
+            <%= image_tag("lolx.jfif", class: "hidden content")%>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div> 
+</div>

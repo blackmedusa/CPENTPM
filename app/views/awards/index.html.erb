@@ -1,0 +1,21 @@
+<div class="ui center aligned container" >
+  <div class="ui huge segment" >
+    <%= link_to "Create new award", new_award_path, class: "floating ui purple tag label"%>
+    <span class="ui huge header">CATEGORIES</span>
+  </div>
+  <div class="ui container">
+    <div class="ui segment">
+        <div class="ui link centered cards">
+          <%@awards.each do |award|%>
+           <%= link_to award_path(award) do %>
+              <div class="ui card">
+               
+                  <%= link_to "#{award.name}", award_path(award), class: "ui basic huge bottom attached label"%>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

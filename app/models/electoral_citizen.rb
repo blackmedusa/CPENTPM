@@ -1,0 +1,2 @@
+class ElectoralCitizen < ApplicationRecord
+end

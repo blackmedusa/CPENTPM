@@ -1,0 +1,19 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(".ui.toggle.button").click(function() {
+      let menu = $(this)
+        .parent()
+        .parent()
+        .parent();
+      $(".ui.vertical.menu", menu).toggle(100);
+    });
+
+    $(".ui.dropdown").dropdown();
+
+    $(".ui.progress").progress({
+      showActivity: false
+    });
+  });
+</script>

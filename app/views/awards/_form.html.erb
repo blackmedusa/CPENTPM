@@ -1,0 +1,30 @@
+<div class="ui center aligned container" style="width:60%">
+  <div class="ui container">
+    <div class="ui segment">
+    <%= form_for @award, html: {class: "ui form"}, method: :post, class: "ui form",  multipart: true do |f| %>
+  <ul>
+  <% @award.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <div class="field" style="font-size: 1.3em;">
+    <%= f.label :name%><br />
+    <%= f.text_field :name, required: true, placeholder: "Input a descriptive title" %>
+  </div>
+
+  <div class="field" style="font-size: 1.3em;">
+    <%= f.label :description%><br />
+    <%= f.text_area :description, required: true, placeholder: "Add a good description" %>
+  </div>
+  <div class="field">
+    <%= f.file_field "image", required: true, class: "ui button", accept: "image/*"%>
+  </div>
+  <p>
+    <%= f.submit "Create Article", class: "ui primary button", style: "font-size: 1.2em;"%>
+  </p>
+  
+<% end %>
+</div>
+
+</div>
+</div>

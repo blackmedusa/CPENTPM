@@ -1,0 +1,27 @@
+<div class="ui center aligned container" >
+  <div class="ui huge segment" style="background-image: linear-gradient(to right, rgb(128, 88, 15), rgb(107, 107, 184), rgb(108, 202, 108));">
+    <%= link_to "Create new Nominee", new_nominee_path, class: "floating ui purple tag label"%>
+    <span class="ui huge header">NOMINEES</span>
+  </div>
+  <div class="ui center aligned container" style="width: 50%">
+    <%@nominees.each do |nominee|%>
+      <div class="ui segment">
+        <div class="ui vertical divider"><i class="info icon"></i></div>
+        <div class="ui two column grid">
+          <%= link_to nominee_path(nominee), class: "column" do %>
+            <div class="ui small stretched image">
+              <%= image_tag("lolx.jfif", class: "ui rounded image") %>
+            </div>
+          <% end %>
+          <%= link_to nominee_path(nominee), class: "column" do %>
+          <div class="column" style="color: black;">
+            <h2 class="header"><%= "#{nominee.first_name.upcase} #{nominee.last_name.upcase}"%></h2>
+            <h5 class="header" style="text-decoration: underline; font-weight:lighter">category</h5>
+            <h3 class="header"><%= nominee.award.name.upcase%></h3>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

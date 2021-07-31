@@ -1,0 +1,26 @@
+<div class="ui center aligned container" >
+  <div class="ui huge segment" style="background-image: linear-gradient(to right, rgb(128, 88, 15), rgb(107, 107, 184), rgb(108, 202, 108));">
+    <%= link_to "Create new Electoral Commission Record", new_electoral_citizen_path, class: "floating ui purple tag label"%>
+    <span class="ui huge header">NHIS</span>
+  </div>
+  <div class="ui center aligned container" style="width: 50%">
+    <%@electoral_citizens.each do |citizen|%>
+      <div class="ui segment">
+        <div class="ui vertical divider"><i class="info icon"></i></div>
+        <div class="ui two column grid">
+          <%= link_to nhis_citizen_path(citizen), class: "column" do %>
+          <% end %>
+          <%= link_to nhis_citizen_path(citizen), class: "column" do %>
+          <div class="column" style="color: black;">
+            <h2 class="header"><%= "#{citizen.first_name.upcase} #{citizen.last_name.upcase}"%></h2>
+            <h5 class="header" style="text-decoration: underline; font-weight:lighter">General ID</h5>
+            <h3 class="header"><%= citizen.general_id%></h3>
+            <h5 class="header" style="text-decoration: underline; font-weight:lighter">Description</h5>
+            <h3 class="header"><%= citizen.description%></h3>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="ui tablet computer only padded grid">
+  <div class="ui inverted top fixed  large borderless menu">
+    <div class="ui container">
+      <%= link_to "All", all_citizens_path, class: "active header item"%>
+      <%= link_to "EC", electoral_citizens_path, class: "item"%>
+      <%= link_to "B&D REG", registry_citizens_path, class: "item" %>
+      <%= link_to "NHIS", nhis_citizens_path, class: "item" %>
+      <%= link_to "DVLA", dvla_citizens_path, class: "item" %>
+      <%= link_to "About", static_pages_about_path, class: "item" %>
+
+    <div class="right menu">
+      <div class="item">
+        <div class="ui icon input">
+          <input type="text" placeholder="Search...">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+      <% if current_user %>
+        <%= link_to "Logout", destroy_user_session_path, class: "ui item"%>
+      <%else%>
+        <div class="ui item">
+          <%= link_to "Login", new_user_session_path, class: "ui inverted blue button"%>
+        </div>
+        <div class="ui item">
+          <%= link_to "SignUp", new_user_registration_path, class: "ui pink inverted button"%>
+        </div>
+        
+      <% end %>
+      
+    </div>
+</div>
+
+  </div>
+</div>
+
+<div class="ui mobile only grid">
+  <div class="ui inverted top fixed borderless menu">
+    <%= link_to "Awards", awards_path, class: "header item"%>
+    <div class="right menu">
+      <div class="item">
+        <button class="ui icon toggle basic inverted button">
+          <i class="content icon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="ui inverted vertical borderless fluid menu">
+      <%= link_to "Home", awards_path, class: "item"%>
+      <%= link_to "Nominees", nominees_path, class: "item" %>
+      <%= link_to "About", static_pages_about_path, class: "item" %>
+      <% if current_user %>
+        <%= link_to "Logout", destroy_user_session_path, class: "ui item"%>
+      <%else%>
+        <div class="ui item">
+          <%= link_to "Login", new_user_session_path, class: "ui inverted blue primary button"%>
+        </div>
+        <div class="ui item">
+          <%= link_to "SignUp", new_user_registration_path, class: "ui pink inverted button"%>
+        </div>
+        
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div id="content">
+  <div class="ui container">
+    <div class="ui jumbotron message">
+      <div class="ui huge header">Template Name</div>
+      <p>
+        Description:
+        This is a template showcasing the optional theme stylesheet included
+        in Semantic-UI. Use it as a starting point to create something more
+        unique by building on or modifying it.
+      </p>
+    </div>
+    <div class="ui center aligned container">
+      <h2 class="ui huge header">Authors</h2>
+      <div class="ui medium sequenced images">
+        <%= image_tag("elyse.png", class: "ui circular image ") %>
+        <%= image_tag("elyse.png", class: "ui circular image") %>
+        <%= image_tag("elyse.png", class: "ui circular image") %>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+<script>
+  
+  $('.sequenced.images .image').hover().transition({
+    debug     : true,
+        animation : 'jiggle',
+        duration  : 500,
+        interval  : 200
+  });
+
+</script>

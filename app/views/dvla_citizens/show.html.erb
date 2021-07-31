@@ -1,0 +1,31 @@
+<div id="content">
+  <div class="ui container">
+    <div class="ui center aligned segment">
+      <h2 class="huge inverted header">
+        CITIZEN DATA FOR DVLA
+      </h2>
+    </div>
+    <div class="ui center aligned container">
+      <div class="ui three column stackable center aligned grid">
+        <div class="column">
+          <div class="ui segment">
+              <h4 class="header" style="text-decoration: underline;">name</h4>
+              <h1><%= @dvla_citizen.first_name%> <%= @dvla_citizen.last_name%></h1>
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+          </div>
+        </div>
+        <div class="column">
+          <div class="ui segment">
+            <h4 class="header" style="text-decoration: underline;">Description</h4>
+          <h1>
+            <%= @dvla_citizen.description%>
+          </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
